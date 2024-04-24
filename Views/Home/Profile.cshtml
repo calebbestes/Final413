@@ -1,0 +1,13 @@
+@model Final.Models.Entertainer
+
+@{
+    Layout = null;
+}
+
+<h1>@Model.EntStageName</h1>
+<p>@Model.EntCity</p>
+<p>@Model.EntState</p>
+<p>@Model.EntZipCode</p>
+<td><a class="btn" asp-controller="Home" asp-action="Edit" asp-route-id="@Model.EntertainerId">Edit</a></td>
+<td><a class="btn-warning" asp-controller="Home" asp-action="Delete" asp-route-id="@Model.EntertainerId">Delete</a></td>
+

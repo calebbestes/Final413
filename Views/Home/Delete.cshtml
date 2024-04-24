@@ -1,0 +1,15 @@
+@model Final.Models.Entertainer
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Delete Confirmation</h1>
+
+<h3>Are you sure you want to delete @Model.EntStageName?</h3>
+
+<form asp-controller="Home" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="EntertainerId"/>
+    <button type="submit">Yes</button>
+    <a class="btn" asp-controller="Home" asp-action="Entertainers">Cancel</a>
+</form>
